@@ -1,8 +1,6 @@
-This is a project based on many assignments that i have done in various classes at murray state university.
-
 This project uses password hashing to login to a website.
 
-This is a work in progress but the foundation is there and i will continue to work on this as i have time to.
+This is a work in progress but the foundation is there. I will continue to work on this as i have time to.
 
 Dependencies used in this project include:
 - vue
