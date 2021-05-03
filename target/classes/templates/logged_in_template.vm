@@ -1,0 +1,62 @@
+<html>
+    <head>
+      <title>Home</title>
+          <!-- You should do your imports for Pure and Vue here! -->
+          <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+          <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="application">
+          <div class="pure-g">
+
+            <div class="pure-u-1-3" style="background-color: chartreuse" >
+              <h1>$username</h1>
+            </div>
+
+            <div class="pure-u-1-3" style="background-color: aqua">
+              <input v-model="post.text" type="text">
+              <button v-on:click="add();">+</button>
+            </div>
+
+            <div class="pure-u-1-3" style="background-color: hotpink">
+              <h2>Posts:</h2>
+              <ul>
+                <li v-for="post in posts" :key="post.id">
+                  {{post.text}}
+                  <button v-on:click="remove(post.id);">x</button>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+
+        </div>
+        <script>
+          var application = new Vue({
+            el: '#application',
+            data: {
+              posts: [],
+              post: {
+                id: 0,
+                text: "Enter some text"
+              }
+            },
+            methods: {
+              add: function() {
+                let newPost = {
+                  id: this.post.id++,
+                  text: this.post.text
+                }
+                this.posts.push(newPost);
+              },
+
+              remove: function(id){
+                this.posts.splice(this.posts.indexOf(id), 1);
+              }
+            }
+          });
+        </script>
+    </body>
+</html>

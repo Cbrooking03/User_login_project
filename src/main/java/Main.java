@@ -14,8 +14,10 @@ public class Main {
             context.render("templates/login.vm");
         });
 
-        application.get("/login/success", context -> {
-            context.render("templates/successful_login.vm");
+        application.get("/login/home", context -> {
+            final Map<String,Object> templateData = new HashMap<>();
+            templateData.put("username", "TEMP_USERNAME");
+            context.render("templates/logged_in_template.vm");
         });
 
 
