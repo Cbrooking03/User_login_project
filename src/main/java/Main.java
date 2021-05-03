@@ -11,10 +11,13 @@ public class Main {
         });
 
         application.get("/login", context -> {
-            final Map<String,Object> templateData = new HashMap<>();
-            templateData.put("login","Login");
-            context.render("templates/login.vm", templateData);
+            context.render("templates/login.vm");
         });
+
+        application.get("/login/success", context -> {
+            context.render("templates/successful_login.vm");
+        });
+
 
     }
 }

@@ -6,5 +6,5 @@ Dependencies used in this project include:
 - vue
 - maven
 - javalin
-- derby
 - gson
+- derby
