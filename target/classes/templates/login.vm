@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <title>$login</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+    <div id="application">
+        <div class="pure-g">
+
+            <div class="pure-u-1 pure-u-med-3-4 pure-u-xlrg-2-3" style="background-color: chartreuse" >
+                <h1>$login</h1>
+            </div>
+
+            <div class="pure-u-1 pure-u-med-3-4 pure-u-xlrg-2-3" style="background-color: aqua">
+                <input v-model="user.username" type="text">
+                <input v-model="user.password" type="text">
+                <button v-on:click="login();">Login</button>
+            </div>
+
+        </div>
+    </div>
+
+        <script>
+
+          /* Your Vue application code should go in this script element! */
+            var application = new Vue({
+                el: '#application',
+                data: {
+                    user: {
+                        username:"username",
+                        password:"password"
+                    }
+                },
+                methods: {
+                    login: function() {
+
+
+                    }
+                }
+            });
+        </script>
+
+    </body>
+</html>
